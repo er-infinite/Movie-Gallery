@@ -32,7 +32,6 @@ const vue_app = new Vue({
       },
       data: {
             // This holds your movies.json data.
-            title: "IMDB + Emmalyn's Top 8 Movies",
             owner: "Emmalyn Ramos",
             github: "https://github.com/er-infinite/ramos-p3",
             movies: []
@@ -41,5 +40,15 @@ const vue_app = new Vue({
       },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
-      }
+      },
+      el: '#app_title',
+      data: {
+            title: "IMDB + Emmalyn's Top 8 Movies"
+      },
+      el: '#github',
+      data: {
+            owner: "Emmalyn"
+      },
+
+
 })
