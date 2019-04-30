@@ -41,14 +41,21 @@ const vue_app = new Vue({
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
       },
+
+
+})
+
+const app_header = new Vue({
       el: '#app_title',
       data: {
             title: "IMDB + Emmalyn's Top 8 Movies"
-      },
+      }
+})
+
+const app_footer = new Vue({
       el: '#github',
       data: {
-            owner: "Emmalyn"
-      },
-
-
+            owner: "Emmalyn Ramos",
+            github: "https://github.com/er-infinite/ramos-p3"
+      }
 })
