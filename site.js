@@ -32,8 +32,6 @@ const vue_app = new Vue({
       },
       data: {
             // This holds your movies.json data.
-            owner: "Emmalyn Ramos",
-            github: "https://github.com/er-infinite/ramos-p3",
             movies: []
 
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
@@ -56,6 +54,7 @@ const app_footer = new Vue({
       el: '#github',
       data: {
             owner: "Emmalyn Ramos",
-            github: "https://github.com/er-infinite/ramos-p3"
+            github: "https://github.com/er-infinite/ramos-p3",
+            
       }
 })
