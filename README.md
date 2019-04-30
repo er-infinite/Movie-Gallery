@@ -1,16 +1,29 @@
-The initial start of a Movie Gallery that lists various movie titles and metadata on the screen. Using Vue.js, and no jQuery, create a working Movie Gallery as described on your assignment in Moodle.
+# p3-cli2
 
-Make sure to track all your changes using good commit messages (http://chris.beams.io/posts/git-commit/). 
+## Project setup
+```
+npm install
+```
 
-For the project, you will be editing:
-/index.html
-/site.js
-/style.css
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-You will also be adding files (poster images) to:
-/img/
+### Compiles and minifies for production
+```
+npm run build
+```
 
-There are example images in:
-/examples/
+### Run your tests
+```
+npm run test
+```
 
-Leave the index.php file alone. It is used to make sure your Heroku server deploys correctly with PHP functionality and also automatically redirects visitors to index.html.
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
