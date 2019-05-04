@@ -29,10 +29,12 @@ const vue_app = new Vue({
             fetch('movies.json').then(response => response.json()).then(json => {
                   this.movies = json
             })
+            console.log(movies);
       },
       data: {
             // This holds your movies.json data.
-            movies: []
+            movies: [],
+            
 
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
       },
