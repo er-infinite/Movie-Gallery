@@ -49,7 +49,7 @@
 						<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movie.iscore}} </p>
 						<p class="runtime">Runtime: {{movie.runtime}}</p>
 						<p class="released">Released: {{movie.released}} | Rated: {{movie.rating}}</p>
-						<p class="websites">Websites: <a>%imdb%</a> | <a>%website%</a></p>
+						<p class="websites">Websites: <a :href="movie.imdb" target="_blank">{{movie.imdb}}</a> | <a>%website%</a></p>
 
 						<div class="social">
 							<p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> %likes%</p>
