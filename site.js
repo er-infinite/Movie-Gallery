@@ -29,17 +29,23 @@ const vue_app = new Vue({
             fetch('movies.json').then(response => response.json()).then(json => {
                   this.movies = json
             })
-            console.log(movies);
+       
       },
       data: {
             // This holds your movies.json data.
             movies: [],
-            
 
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
       },
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+
+            //Increase like button by 1 when clicked
+            addLike: function (movie, index){
+                  movie.likes ++;
+                  console.log("movie likes: " + movie.likes + " index: " + index);
+                  
+            }
       },
 
 
