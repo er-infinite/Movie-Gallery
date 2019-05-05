@@ -1,3 +1,4 @@
+
 /* SITE.JS: THIS FILE CONTAINS THE METHODS/FUNCTIONS AND VARIABLES CONTROLLING YOUR SITE
 //
 */
@@ -41,12 +42,33 @@ const vue_app = new Vue({
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
 
             //Increase like button by 1 when clicked
-            addLike: function (movie, index){
+            addLike: function (movie){
                   movie.likes ++;
-                  console.log("movie likes: " + movie.likes + " index: " + index);
-                  
-            }
+                  console.log("movie likes: " + movie.likes);
+           
+            },
+            
+            //Decrease like button by 1 when clicked
+            decreaseLike: function (movie){
+                  movie.dislikes --;
+                  console.log("movie dislikes: " + movie.dislikes);           
+            },
+
+            //Update poster when clicked 
+            // posterClick: function (movie){
+            //       console.log("date: " + movie.released);
+            // }
       },
+
+      filters: {
+            //convert poster date to USA date
+            makeTextDate: function (movie) {
+                  // return moment(date).format('MMMM Do YYYY, h:mm:ss a');
+                  var date = movie.released;
+                  console.log (movie.title +": " + date);
+                  return moment(String(date)).format('MMMM D, YYYY');
+                }
+      }
 
 
 })
