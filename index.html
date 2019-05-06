@@ -38,7 +38,7 @@
 		<div class="main">
 
 			<div class="container" id="vue_app"  >
-
+				<div class="row d-flex">
 				<div class="col-md-6">
 					<div class="thumbnail" v-for="(movie, index) in movies" :key="index">
 
@@ -49,7 +49,7 @@
 						<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{movie.iscore}} </p>
 						<p class="runtime">Runtime: {{movie | timeText}}</p>
 						<p class="released">Released: {{movie | makeTextDate}} | Rated: {{movie.rating}}</p>
-						<p class="websites">Websites: <a :href="movie.imdb" target="_blank">{{movie.imdb}}</a> | <a :href="movie.website" target="_blank">{{movie.website}}</a></p>
+						<p class="websites">Websites: <a :href="movie.imdb" target="_blank">IMDB</a> | <a :href="movie.website" target="_blank">Official</a></p>
 
 						<div class="social">
 							<a v-on:click="addLike(movie)"><p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{movie.likes}}</p></a>
@@ -57,6 +57,10 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-md-6">
+					
+				</div>
+			</div>
 
 
 			</div>
