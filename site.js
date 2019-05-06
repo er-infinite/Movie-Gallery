@@ -35,6 +35,7 @@ const vue_app = new Vue({
       data: {
             // This holds your movies.json data.
             movies: [],
+           
 
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
       },
@@ -55,9 +56,21 @@ const vue_app = new Vue({
             },
 
             //Update poster when clicked 
-            // posterClick: function (movie){
-            //       console.log("date: " + movie.released);
-            // }
+            posterClick: function (movie, index){
+                  var moviePostersLength = movie.posters.length; 
+
+                  if (movie.posterindex < 0){
+                        movie.posterindex += moviePostersLength; 
+                  }
+
+                  if (movie.posterindex < moviePostersLength - 1){
+                        movie.posterindex ++;
+                  } else {
+                        movie.posterindex = 0; 
+                  }
+                  
+                  console.log("index: " + movie.posterindex + " movie posters: " + moviePostersLength);
+            }
       },
 
       filters: {
@@ -67,7 +80,14 @@ const vue_app = new Vue({
                   var date = movie.released;
                   console.log (movie.title +": " + date);
                   return moment(String(date)).format('MMMM D, YYYY');
-                }
+                },
+
+            //covert runtime to hrs and minutes
+            timeText: function (movie) {
+            var time = movie.runtime;
+            return Math.floor(time / 60) + 'h ' + time % 60 + 'm';
+            },
+
       }
 
 
